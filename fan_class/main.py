@@ -23,17 +23,17 @@ class Fan:
     def get_on(self):
         return self.__on
 
-    def get_speed(self, speed):
-        return self.__speed = speed
+    def set_speed(self, speed):
+        self.__speed = speed
 
-    def get_radius(self, radius):
-        return self.__radius = radius
+    def set_radius(self, radius):
+        self.__radius = radius
 
-    def get_color(self, color):
-        return self.__color = color
+    def set_color(self, color):
+        self.__color = color
 
-    def get_on(self, on):
-        return self.__on = on
+    def set_on(self, on):
+        self.__on = on
 
 fan1 = Fan(Fan.FAST, 10, "yellow", True)
 fan2 = Fan(Fan.MEDIUM, 5, "blue", False)
