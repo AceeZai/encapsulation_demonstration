@@ -4,8 +4,9 @@ class Car:
         self.__make = make
 
     def accelerate(self):
-        self.__speed = 0
-
         self.__speed += 5
 
-print(my_car.get_speed
+    def brake(self):
+        self.__speed -= 5
+my_car = Car(2020)
+print(my_car.get_speed())
