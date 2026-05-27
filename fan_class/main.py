@@ -11,6 +11,9 @@ class Fan:
         self.color = blue
         self.on = on
 
+        fan1 = Fan(Fan.FAST, 10, "yellow", True)
+        fan2 = Fan(Fan.MEDIUM, 5, "blue", False)
+
 fan = Fan()
 
 print(fan.speed)
