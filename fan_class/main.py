@@ -1,0 +1,1 @@
+print("Fan class module started")
