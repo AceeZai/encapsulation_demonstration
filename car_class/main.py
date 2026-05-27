@@ -8,5 +8,6 @@ class Car:
 
     def brake(self):
         self.__speed -= 5
-my_car = Car(2020)
+
+my_car = Car(2020,  "Toyota")
 print(my_car.get_speed())
