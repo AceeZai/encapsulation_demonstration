@@ -1,1 +1,1 @@
-print("FAN TEST RUNNING NOW")
+print("Starting Fan Class Project")
