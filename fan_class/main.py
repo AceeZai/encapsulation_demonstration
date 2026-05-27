@@ -12,4 +12,8 @@ class Fan:
         self.color = "blue"
 
 fan = Fan()
-print(fan)
+
+print(fan.speed)
+print(fan.radius)
+print(fan.color)
+print(fan.on)
