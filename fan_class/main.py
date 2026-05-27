@@ -10,5 +10,7 @@ class Fan:
         self.on = False
         self.radius = 5
 
+        self.color = "blue"
+
 fan = Fan()
 print(fan)
