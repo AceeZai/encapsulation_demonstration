@@ -2,6 +2,7 @@ class Car:
     def __init__(self, year_model, make):
         self.__year_model = year_model
         self.__make = make
+        self.__speed = 0
 
     def accelerate(self):
         self.__speed += 5
@@ -9,7 +10,7 @@ class Car:
     def brake(self):
         self.__speed -= 5
 
-my_car = Car(2020,  "Toyota")
+    def get_speed(self):
+        return self.__speed
 
-my_car.accelerate()
-print(my_car.get_speed())
+
