@@ -7,6 +7,7 @@ class Fan:
 
     def __init__(self):
         self.speed = SLOW
+        self.on = False
 
 fan = Fan()
 print(fan)
