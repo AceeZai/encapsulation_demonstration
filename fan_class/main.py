@@ -6,10 +6,10 @@ class Fan:
     FAST = 3
 
     def __init__(self, speed=1, radius=5, color="blue", on=False):
-        self.speed = fan.SLOW
-        self.on = False
-        self.radius = 5
-        self.color = "blue"
+        self.speed = speed
+        self.radius = radius
+        self.color = blue
+        self.on = on
 
 fan = Fan()
 
