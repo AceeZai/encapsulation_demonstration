@@ -3,4 +3,5 @@ class Car:
         self.__year_model = year_model
         self.__make = make
 
+    def accelerate(self):
         self.__speeed = 0
