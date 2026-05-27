@@ -13,4 +13,10 @@ class Car:
     def get_speed(self):
         return self.__speed
 
+    #added display info
+    def display_info(self):
+        print("Car Model:", self.__year_model)
+        print("Car Make:", self.__make)
+        print("Current Speed:", self.__speed)
+
 
