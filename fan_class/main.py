@@ -14,11 +14,12 @@ class Fan:
     def get_speed(self):
         return self.__speed
 
+    self.__radius = radius
+
 fan1 = Fan(Fan.FAST, 10, "yellow", True)
 fan2 = Fan(Fan.MEDIUM, 5, "blue", False)
 
 print("Fan 1 Speed:", fan1.get_speed())
 
-print(fan.radius)
 print(fan.color)
 print(fan.on)
