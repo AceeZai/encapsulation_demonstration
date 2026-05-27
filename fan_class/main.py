@@ -7,9 +7,9 @@ class Fan:
 
     def __init__(self, speed=1, radius=5, color="blue", on=False):
         self.__speed = speed
-        self.radius = radius
-        self.color = color
-        self.on = on
+        self.__radius = radius
+        self.__color = color
+        self.__on = on
 
     def get_speed(self):
         return self.__speed
