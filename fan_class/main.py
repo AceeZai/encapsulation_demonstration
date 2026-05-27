@@ -1,1 +1,1 @@
-print("FAN TEST RUNNING")
+print("FAN TEST RUNNING NOW")
