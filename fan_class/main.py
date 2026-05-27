@@ -1,7 +1,9 @@
 print("Starting Fan Class Project")
 
 class Fan:
-    pass
+    SLOW = 1
+    MEDIUM = 2
+    FAST = 3
 
 
 fan = Fan()
