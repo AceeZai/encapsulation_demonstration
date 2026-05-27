@@ -17,7 +17,7 @@ class Fan:
 fan1 = Fan(Fan.FAST, 10, "yellow", True)
 fan2 = Fan(Fan.MEDIUM, 5, "blue", False)
 
-print(fan1.speed, fan1.radius, fan1.color, fan1.on)
+print("Fan 1 Speed:", fan1.get_speed())
 
 print(fan.radius)
 print(fan.color)
