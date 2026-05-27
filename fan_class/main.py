@@ -5,6 +5,8 @@ class Fan:
     MEDIUM = 2
     FAST = 3
 
+    def __init__(self):
+        self.speed = SLOW
 
 fan = Fan()
 print(fan)
