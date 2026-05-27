@@ -1,1 +1,1 @@
-print("Fan class module started")
+print("FAN TEST RUNNING")
