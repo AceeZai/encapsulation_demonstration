@@ -8,6 +8,7 @@ class Fan:
     def __init__(self):
         self.speed = SLOW
         self.on = False
+        self.radius = 5
 
 fan = Fan()
 print(fan)
