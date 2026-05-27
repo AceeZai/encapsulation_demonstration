@@ -7,3 +7,5 @@ class Car:
         self.__speed = 0
 
         self.__speed += 5
+
+print(my_car.get_speed
