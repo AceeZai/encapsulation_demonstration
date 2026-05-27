@@ -10,4 +10,6 @@ class Car:
         self.__speed -= 5
 
 my_car = Car(2020,  "Toyota")
+
+my_car.accelerate()
 print(my_car.get_speed())
