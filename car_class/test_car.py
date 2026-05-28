@@ -17,3 +17,4 @@ for count in range(5):
     my_car.brake()
     speed = my_car.get_speed()
     print("The car slowed down to", speed, "mph.", "|" * speed)
+    time.sleep(0.5)
