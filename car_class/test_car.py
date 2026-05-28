@@ -8,3 +8,6 @@ print("\n--- Accelerating ---")
 for count in range(5):
     my_car.accelerate()
 print(my_car.get_speed())
+
+for count in range(5):
+my_car.break()
