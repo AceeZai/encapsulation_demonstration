@@ -16,8 +16,4 @@ for count in range(5):
 for count in range(5):
     my_car.brake()
     speed = my_car.get_speed()
-
-speed = my_car.get_speed()
-
-print("Speed:", speed, "|" * speed)
-print("|" * speed)
+    print("The car slowed down to", speed, "mph.", "|" * speed)
