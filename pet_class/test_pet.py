@@ -47,14 +47,16 @@ else:
 image_path = os.path.join(base_dir, image_file)
 
 image = Image.open(image_path)
-image = image.resize((200, 200))
+image = image.resize((250, 250))
 
 window = tk.Tk()
-window.title("Pet Picture")
+window.title("🐾 Your Pet Profile")
 
 photo = ImageTk.PhotoImage(image)
 
 label = tk.Label(window, image=photo)
 label.pack()
+
+label.image = photo
 
 window.mainloop()
