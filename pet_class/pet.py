@@ -1,2 +1,3 @@
 class Pet:
-    pass
+    def__init__(self):
+    self._name
