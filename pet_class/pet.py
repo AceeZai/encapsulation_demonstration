@@ -4,7 +4,7 @@ class Pet:
         self.__animal_type = animal_type
         self.__age = age
 
-    def get_name(self):
+    def set_name(self):
         return self.__name
 
     def set_animal_type(self, animal_type):
@@ -13,6 +13,9 @@ class Pet:
     def set_age(self, age):
         return self.__age
 
+my_pet.get_name(name)
+my_pet.get_animal_type(animal_type)
+my_pet.get_age(age)
 
 my_pet = Pet()
 age = int("thre")
