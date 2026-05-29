@@ -15,3 +15,4 @@ class Pet:
 
 
 my_pet = Pet()
+age = int("thre")
