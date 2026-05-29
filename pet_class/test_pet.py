@@ -23,5 +23,4 @@ print("Pet Age:", my_pet.get_age())
 print("\nPet Sound:")
 my_pet.pet_sound()
 
-
 print("=" * 40)

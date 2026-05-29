@@ -34,6 +34,15 @@ class Pet:
         elif self.__animal_type.lower() == "bird":
             print("Tweet Tweet!")
 
+        elif self.__animal_type.lower() == "cow":
+            print("MOO MOO!")
+
+        elif self.__animal_type.lower() == "fish":
+            print("Bloop Bloop")
+
+        elif self.__animal_type.lower() == "frog":
+            print("Kokak? KOKAK!")
+
         else:
             print("Cute pet sound!")
 
