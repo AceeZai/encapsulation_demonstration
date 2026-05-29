@@ -1,3 +1,6 @@
+from tkinter import *
+from PIL import Image, ImageTk
+
 from pet import Pet
 import time
 
