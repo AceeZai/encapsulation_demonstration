@@ -18,4 +18,4 @@ my_pet.get_animal_type(animal_type)
 my_pet.get_age(age)
 
 my_pet = Pet()
-age = int("thre")
+age = int(input("Enter pet's age"))
