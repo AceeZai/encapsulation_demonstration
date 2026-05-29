@@ -26,5 +26,5 @@ class Pet:
 
 
 
-my_pet = Pet()
-age = int(input("Enter pet's age"))
+
+
