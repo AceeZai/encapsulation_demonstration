@@ -1,5 +1,4 @@
 from pet import Pet
-import time
 import os
 import tkinter as tk
 from PIL import Image, ImageTk
@@ -14,49 +13,64 @@ my_pet.set_name(name)
 my_pet.set_animal_type(animal_type)
 my_pet.set_age(age)
 
-print("\nSaving pet information...")
-time.sleep(1)
-
-print("\n--- Pet Information ---")
-
-print("Pet Name:", my_pet.get_name())
-print("Animal Type:", my_pet.get_animal_type())
-print("Pet Age:", my_pet.get_age())
-
-print("\nPet Sound:")
-my_pet.pet_sound()
-
+# -----------------------
+# IMAGE SETUP
+# -----------------------
 base_dir = os.path.dirname(__file__)
-animal = animal_type.lower()
-
-if animal == "dog":
-    image_file = "dog.jpg"
-elif animal == "cat":
-    image_file = "cat.jpg"
-elif animal == "bird":
-    image_file = "bird.jpg"
-elif animal == "cow":
-    image_file = "cow.jpg"
-elif animal == "fish":
-    image_file = "fish.jpg"
-elif animal == "frog":
-    image_file = "frog.jpg"
-else:
-    image_file = "dog.png"
-
+image_file = animal_type.lower() + ".jpg"
 image_path = os.path.join(base_dir, image_file)
 
 image = Image.open(image_path)
 image = image.resize((250, 250))
 
+# -----------------------
+# PET SOUND LOGIC
+# -----------------------
+animal = animal_type.lower()
+
+if animal == "dog":
+    sound = "Woof Woof!"
+elif animal == "cat":
+    sound = "Meow!"
+elif animal == "bird":
+    sound = "Tweet Tweet!"
+elif animal == "cow":
+    sound = "Moo Moo!"
+elif animal == "fish":
+    sound = "Blub Blub!"
+elif animal == "frog":
+    sound = "Ribbit Ribbit!"
+else:
+    sound = "Cute pet sound!"
+
+# -----------------------
+# TKINTER WINDOW
+# -----------------------
 window = tk.Tk()
-window.title("🐾 Your Pet Profile")
+window.title("🐾 Pet Profile App")
 
 photo = ImageTk.PhotoImage(image)
 
-label = tk.Label(window, image=photo)
-label.pack()
+# IMAGE
+img_label = tk.Label(window, image=photo)
+img_label.pack()
 
-label.image = photo
+# INFO TEXT
+info = f"""
+Name: {my_pet.get_name()}
+Type: {my_pet.get_animal_type()}
+Age: {my_pet.get_age()}
+"""
+
+info_label = tk.Label(window, text=info, font=("Arial", 14))
+info_label.pack()
+
+# PET SOUND (NEW PART)
+sound_label = tk.Label(window, text=f"Sound: {sound}", font=("Arial", 14, "bold"))
+sound_label.pack()
+
+# KEEP IMAGE
+img_label.image = photo
 
 window.mainloop()
+
