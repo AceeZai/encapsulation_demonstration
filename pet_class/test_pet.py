@@ -1,11 +1,7 @@
 import os
-image_path = os.path.join("pet_class", "dog.png")
-image = Image.open(image_path)
-
-from tkinter import *
 from PIL import Image, ImageTk
-
 from pet import Pet
+import tkinter as Tk
 import time
 
 my_pet = Pet()
@@ -57,14 +53,17 @@ elif animal == "frog":
 else:
     image = Image.open("pet_class/dog.png")
 
+image_path = os.path.join(base_dir, image_file)
+
+image = Image.open(image_path)
 image = image.resize((200, 200))
+
+window = tk.Tk()
+window.title("Pet Picture")
 
 photo = ImageTk.PhotoImage(image)
 
-label = Label(window, image=photo)
-
+label = tk.Label(window, image=photo)
 label.pack()
 
 window.mainloop()
-
-print("=" * 40)
