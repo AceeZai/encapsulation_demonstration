@@ -1,8 +1,8 @@
-import os
-from PIL import Image, ImageTk
 from pet import Pet
-import tkinter as Tk
 import time
+import os
+import tkinter as tk
+from PIL import Image, ImageTk
 
 my_pet = Pet()
 
@@ -26,32 +26,23 @@ print("Pet Age:", my_pet.get_age())
 print("\nPet Sound:")
 my_pet.pet_sound()
 
-window = Tk()
-
-window.title("Pet Picture")
-
-animal = my_pet.get_animal_type().lower()
+base_dir = os.path.dirname(__file__)
+animal = animal_type.lower()
 
 if animal == "dog":
-    image = Image.open("pet_class/dog.png")
-
+    image_file = "dog.jpg"
 elif animal == "cat":
-    image = Image.open("pet_class/cat.png")
-
+    image_file = "cat.jpg"
 elif animal == "bird":
-    image = Image.open("pet_class/bird.png")
-
+    image_file = "bird.jpg"
 elif animal == "cow":
-    image = Image.open("pet_class/cow.png")
-
+    image_file = "cow.jpg"
 elif animal == "fish":
-    image = Image.open("pet_class/fish.png")
-
+    image_file = "fish.jpg"
 elif animal == "frog":
-    image = Image.open("pet_class/frog.png")
-
+    image_file = "frog.jpg"
 else:
-    image = Image.open("pet_class/dog.png")
+    image_file = "dog.png"
 
 image_path = os.path.join(base_dir, image_file)
 
