@@ -1,4 +1,6 @@
 from pet import Pet
+import time
+
 my_pet = Pet()
 
 name = input("Enter your pet's name: ")

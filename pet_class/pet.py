@@ -1,4 +1,5 @@
 class Pet:
+
     def __init__(self, name="", animal_type="", age=0):
         self.__name = name
         self.__animal_type = animal_type
@@ -21,6 +22,20 @@ class Pet:
 
     def get_age(self):
         return self.__age
+
+    def pet_sound(self):
+
+        if self.__animal_type.lower() == "dog":
+            print("Woof Woof!")
+
+        elif self.__animal_type.lower() == "cat":
+            print("Meow!")
+
+        elif self.__animal_type.lower() == "bird":
+            print("Tweet Tweet!")
+
+        else:
+            print("Cute pet sound!")
 
 
 
