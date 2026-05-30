@@ -38,3 +38,14 @@ class Fan:
         print("Radius:", self.__radius)
         print("Color:", self.__color)
         print("On:", self.__on)
+
+    def display_wind_power(self):
+
+        if self.__speed == Fan.SLOW:
+            print("Wind: 🌬")
+
+        elif self.__speed == Fan.MEDIUM:
+            print("Wind: 🌬🌬")
+
+        elif self.__speed == Fan.FAST:
+            print("Wind: 🌬🌬🌬")
