@@ -1,3 +1,4 @@
+import time
 class Fan:
     SLOW = 1
     MEDIUM = 2
@@ -49,3 +50,21 @@ class Fan:
 
         elif self.__speed == Fan.FAST:
             print("Wind: 🌬🌬🌬")
+
+    def spin_animation(self):
+
+        if self.__on:
+
+            frames = ["|", "/", "-", "\\"]
+
+            print("Fan Spinning:")
+
+            for _ in range(3):
+                for frame in frames:
+                    print("\r" + frame, end="")
+                    time.sleep(0.2)
+
+            print()
+
+        else:
+            print("Fan is OFF")
