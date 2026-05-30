@@ -21,6 +21,17 @@ class Fan:
     def get_on(self):
         return self.__on
 
+    def get_speed_name(self):
+
+        if self.__speed == Fan.SLOW:
+            return "SLOW"
+
+        elif self.__speed == Fan.MEDIUM:
+            return "MEDIUM"
+
+        elif self.__speed == Fan.FAST:
+            return "FAST"
+
     def display_info(self):
         print("===== FAN PROFILE =====")
         print("Speed:", self.__speed, f"({self.get_speed_name()})")
