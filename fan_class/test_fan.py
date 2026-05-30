@@ -8,7 +8,7 @@ print("Fan 2:", fan2.get_speed(), fan2.get_radius(), fan2.get_color(), fan2.get_
 
 fan1.display_info()
 fan1.display_wind_power()
-fan1.spin_animation()
+fan1.show_animation()
 fan2.display_info()
 fan2.display_wind_power()
 fan2.spin_animation()

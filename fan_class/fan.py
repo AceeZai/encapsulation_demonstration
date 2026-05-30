@@ -54,20 +54,53 @@ class Fan:
         elif self.__speed == Fan.FAST:
             print("Wind: 🌬🌬🌬")
 
-    def spin_animation(self):
+    def show_animation(self):
 
-        if self.__on:
-
-            frames = ["|", "/", "-", "\\"]
-
-            print("Fan Spinning:")
-
-            for _ in range(3):
-                for frame in frames:
-                    print("\r" + frame, end="")
-                    time.sleep(0.2)
-
-            print()
-
-        else:
+        if not self.__on:
             print("Fan is OFF")
+            return
+
+        window = tk.Tk()
+        window.title("Fan Animation")
+
+        label = tk.Label(window)
+        label.pack()
+
+        base_dir = os.path.dirname(__file__)
+
+        image_files = [
+            "fan_1.jpg",
+            "fan_2.jpg",
+            "fan_3.jpg",
+            "fan_4.jpg"
+        ]
+
+        images = []
+
+        for file in image_files:
+            image_path = os.path.join(base_dir, file)
+            image = Image.open(image_path)
+            image = image.resize((250, 250))
+            images.append(ImageTk.PhotoImage(image))
+
+        if self.__speed == Fan.SLOW:
+            delay = 400
+        elif self.__speed == Fan.MEDIUM:
+            delay = 200
+        else:
+            delay = 100
+
+        frame_index = 0
+
+        def animate():
+            nonlocal frame_index
+
+            label.config(image=images[frame_index])
+            label.image = images[frame_index]
+
+            frame_index = (frame_index + 1) % len(images)
+
+            window.after(delay, animate)
+
+        animate()
+        window.mainloop()
