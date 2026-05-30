@@ -20,3 +20,10 @@ class Fan:
 
     def get_on(self):
         return self.__on
+
+    def display_info(self):
+        print("===== FAN PROFILE =====")
+        print("Speed:", self.__speed, f"({self.get_speed_name()})")
+        print("Radius:", self.__radius)
+        print("Color:", self.__color)
+        print("On:", self.__on)
