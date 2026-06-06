@@ -7,11 +7,11 @@ class Fan:
     MEDIUM = 2
     FAST = 3
 
-    def __init__(self, speed=1, radius=5, color="blue", on=False):
+    def __init__(self, speed=1, radius=5, color="blue", is_on=False):
         self.__speed = speed
         self.__radius = radius
         self.__color = color
-        self.__on = on
+        self.__is_on = is_on
 
     def get_speed(self):
         return self.__speed
@@ -23,7 +23,7 @@ class Fan:
         return self.__color
 
     def get_on(self):
-        return self.__on
+        return self.__is_on
 
     def get_speed_name(self):
 
@@ -41,7 +41,7 @@ class Fan:
         print("Speed:", self.__speed, f"({self.get_speed_name()})")
         print("Radius:", self.__radius)
         print("Color:", self.__color)
-        print("On:", self.__on)
+        print("On:", self.__is_on)
 
     def display_wind_power(self):
 
@@ -56,7 +56,7 @@ class Fan:
 
     def show_animation(self):
 
-        if not self.__on:
+        if not self.__is_on:
             print("Fan is OFF")
             return
 
