@@ -77,11 +77,11 @@ class Fan:
 
         images = []
 
-        for file in image_files:
-            image_path = os.path.join(base_dir, file)
-            image = Image.open(image_path)
-            image = image.resize((250, 250))
-            images.append(ImageTk.PhotoImage(image))
+        for image_file in image_files:
+            image_path = os.path.join(base_dir, image_file)
+            fan_image = Image.open(image_path)
+            fan_image = fan_image.resize((250, 250))
+            images.append(ImageTk.PhotoImage(fan_image))
 
         if self.__speed == Fan.SLOW:
             delay = 400
