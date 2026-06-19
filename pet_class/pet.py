@@ -24,23 +24,24 @@ class Pet:
         return self.__age
 
     def pet_sound(self):
+        animal_type_lower = self.__animal_type.lower()
 
-        if self.__animal_type.lower() == "dog":
+        if self.__animal_type == "dog":
             print("Woof Woof!")
 
-        elif self.__animal_type.lower() == "cat":
+        elif self.__animal_type == "cat":
             print("Meow!")
 
-        elif self.__animal_type.lower() == "bird":
+        elif self.__animal_type == "bird":
             print("Tweet Tweet!")
 
-        elif self.__animal_type.lower() == "cow":
+        elif self.__animal_type == "cow":
             print("MOO MOO!")
 
-        elif self.__animal_type.lower() == "fish":
+        elif self.__animal_type == "fish":
             print("Bloop Bloop")
 
-        elif self.__animal_type.lower() == "frog":
+        elif self.__animal_type == "frog":
             print("Kokak? KOKAK!")
 
         else:
